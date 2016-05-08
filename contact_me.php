@@ -70,8 +70,6 @@ $mail->addTo($to)->
        //setHtml('<strong>Hello World!</strong>');
 $sendgrid->smtp->send($mail);//*/
 
-require("php/sendgrid-php/sendgrid-php.php");
-
 
 $url = 'https://api.sendgrid.com/';
  $user = 'azure_8b25968ff1147135e919c702af56b589@azure.com';
