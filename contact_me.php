@@ -17,7 +17,7 @@ if(empty($_POST['name'])  		||
 
 	return false;
 
-   }/
+   }
 
 	
 
