@@ -77,12 +77,14 @@ $url = 'https://api.sendgrid.com/';
  $user = 'azure_8b25968ff1147135e919c702af56b589@azure.com';
  $pass = '14FGW8Tc0nyccZW'; 
 
+//$temaHTML = nl2br($email_body);
+
  $params = array(
       'api_user' => $user,
       'api_key' => $pass,
       'to' => $to,
       'subject' => $tema,
-      'html' => nl2br($email_body),
+      'html' => $email_body,
       'text' => $email_body,
       'from' => $email_address,
    );
