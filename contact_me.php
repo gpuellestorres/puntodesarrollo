@@ -71,8 +71,8 @@ $mail->addTo($to)->
 $sendgrid->smtp->send($mail);//*/
 
 $url = 'https://api.sendgrid.com/';
- $user = 'azure_9139b8d19d8d8919ac87387d2b808886@azure.com';
- $pass = '39OkI9h8mNIt1Gm'; 
+ $user = 'azure_8b25968ff1147135e919c702af56b589@azure.com';
+ $pass = '14FGW8Tc0nyccZW'; 
 
  $params = array(
       'api_user' => $user,
