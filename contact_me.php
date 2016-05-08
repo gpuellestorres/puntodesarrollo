@@ -2,6 +2,7 @@
 
 // check if fields passed are empty
 
+/*
 
 if(empty($_POST['name'])  		||
 
@@ -17,17 +18,27 @@ if(empty($_POST['name'])  		||
 
 	return false;
 
-   }
+   }//*/
 
 	
-
+/*
 $name = $_POST['name'];
 
 $email_address = $_POST['email'];
 
 $message = $_POST['message'];
 
+$tema = "desde la página puntodesarrollo.com";//*/
+
+$name = "Guillermo";
+
+$email_address = "gpuellestorres@gmail.com";
+
+$message = "PRUEBA";
+
 $tema = "desde la página puntodesarrollo.com";
+
+
 
 // create email body and send it	
 
