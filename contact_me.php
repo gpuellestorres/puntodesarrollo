@@ -110,9 +110,9 @@ $url = 'https://api.sendgrid.com/';
  $response = curl_exec($session);
  curl_close($session);
 
-$respuesta = json_decode($response);
+$r//espuesta = json_decode($response);
 
-echo $respuesta->{'message'};
+//echo $respuesta->{'message'};
 //echo "Su mensaje fue enviado con éxito. Muchas gracias, pronto le llegará una respuesta a su correo electrónico.";
 
 return true;			
