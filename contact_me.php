@@ -2,7 +2,7 @@
 
 // check if fields passed are empty
 
-/*
+
 
 if(empty($_POST['name'])  		||
 
@@ -21,7 +21,7 @@ if(empty($_POST['name'])  		||
    }//*/
 
 	
-/*
+
 $name = $_POST['name'];
 
 $email_address = $_POST['email'];
@@ -29,16 +29,6 @@ $email_address = $_POST['email'];
 $message = $_POST['message'];
 
 $tema = "desde la página puntodesarrollo.com";//*/
-
-$name = "Guillermo";
-
-$email_address = "gpuellestorres@gmail.com";
-
-$message = "PRUEBA";
-
-$tema = "desde la página puntodesarrollo.com";
-
-
 
 // create email body and send it	
 
@@ -110,9 +100,15 @@ $url = 'https://api.sendgrid.com/';
 
 $respuesta = json_decode($response);
 
-echo $respuesta->{'message'};
-//echo "Su mensaje fue enviado con éxito. Muchas gracias, pronto le llegará una respuesta a su correo electrónico.";
-
-return true;			
+if$respuesta->{'message'}=="success")
+{
+    echo "Su mensaje fue enviado con éxito. Muchas gracias, pronto le llegará una respuesta a su correo electrónico.";
+    return true;
+}
+else
+{
+  echo "Ocurrió un problema al intentar enviar su correo.";
+  return false;
+}
 
 ?>
