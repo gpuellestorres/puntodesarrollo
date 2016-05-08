@@ -58,7 +58,7 @@ $email_body = "Ha recibido un nuevo mensaje desde la página web puntodesarrollo
 $headers = $email_address;
 
 
-mail($to,$email_subject,$email_body,$headers);//*/
+//mail($to,$email_subject,$email_body,$headers);//*/
 
 /*$sendgrid = new SendGrid('username', 'password');
 $mail = new SendGridMail();
@@ -108,7 +108,7 @@ $url = 'https://api.sendgrid.com/';
  $response = curl_exec($session);
  curl_close($session);
 
-$r//espuesta = json_decode($response);
+//$respuesta = json_decode($response);
 
 //echo $respuesta->{'message'};
 //echo "Su mensaje fue enviado con éxito. Muchas gracias, pronto le llegará una respuesta a su correo electrónico.";
