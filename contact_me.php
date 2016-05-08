@@ -82,7 +82,7 @@ $url = 'https://api.sendgrid.com/';
       'api_key' => $pass,
       'to' => $to,
       'subject' => $tema,
-      'html' => $email_body,
+      'html' => str_replace("\n", "<br>", $email_body);
       'text' => $email_body,
       'from' => $email_address,
    );
@@ -108,11 +108,10 @@ $url = 'https://api.sendgrid.com/';
  $response = curl_exec($session);
  curl_close($session);
 
-print_r($params);
-
 echo "<br><br>";
 
-print_r($response);
+$respuesta = json_decode($response);
+print $respuesta->{'message'};
 
 //echo "Su mensaje fue enviado con éxito. Muchas gracias, pronto le llegará una respuesta a su correo electrónico.";
 
