@@ -56,7 +56,7 @@ $email_body = "Ha recibido un nuevo mensaje desde la página web puntodesarrollo
 				  "Correo electrónico: ".$email_address."\n\n Mensaje: \n ".$message;
 
 $headers = $email_address;
-/*
+
 
 mail($to,$email_subject,$email_body,$headers);//*/
 
@@ -69,6 +69,9 @@ $mail->addTo($to)->
        //->
        //setHtml('<strong>Hello World!</strong>');
 $sendgrid->smtp->send($mail);//*/
+
+require("php/sendgrid-php/sendgrid-php.php");
+
 
 $url = 'https://api.sendgrid.com/';
  $user = 'azure_8b25968ff1147135e919c702af56b589@azure.com';
@@ -89,6 +92,8 @@ $url = 'https://api.sendgrid.com/';
  // Generate curl request
  $session = curl_init($request);
 
+  curl_setopt($session, CURLOPT_SSL_VERIFYPEER, false);
+
  // Tell curl to use HTTP POST
  curl_setopt ($session, CURLOPT_POST, true);
 
@@ -108,6 +113,7 @@ print_r($params);
 echo "<br><br>";
 
 print_r($response);
+
 //echo "Su mensaje fue enviado con éxito. Muchas gracias, pronto le llegará una respuesta a su correo electrónico.";
 
 return true;			
