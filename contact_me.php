@@ -1,9 +1,6 @@
 <?php
 
 // check if fields passed are empty
-
-
-
 if(empty($_POST['name'])  		||
 
    empty($_POST['email']) 		||
@@ -19,7 +16,6 @@ if(empty($_POST['name'])  		||
 	return false;
 
    }//*/
-
 	
 
 $name = $_POST['name'];
@@ -65,14 +61,14 @@ $url = 'https://api.sendgrid.com/';
  $user = 'azure_8b25968ff1147135e919c702af56b589@azure.com';
  $pass = '14FGW8Tc0nyccZW'; 
 
-//$temaHTML = nl2br($email_body);
+$bodyHTML = nl2br($email_body);
 
  $params = array(
       'api_user' => $user,
       'api_key' => $pass,
       'to' => $to,
       'subject' => $tema,
-      'html' => $email_body,
+      'html' => $bodyHTML,
       'text' => $email_body,
       'from' => $email_address,
    );
@@ -100,15 +96,15 @@ $url = 'https://api.sendgrid.com/';
 
 $respuesta = json_decode($response);
 
-if$respuesta->{'message'}=="success")
+if($respuesta->{'message'}=="success")
 {
     echo "Su mensaje fue enviado con éxito. Muchas gracias, pronto le llegará una respuesta a su correo electrónico.";
-    return true;
 }
 else
 {
   echo "Ocurrió un problema al intentar enviar su correo.";
-  return false;
 }
+
+return true;
 
 ?>
