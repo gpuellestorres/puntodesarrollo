@@ -79,8 +79,8 @@ $url = 'https://api.sendgrid.com/';
       'api_key' => $pass,
       'to' => $to,
       'subject' => $tema,
-      'html' => $mensaje,
-      'text' => $mensaje,
+      'html' => $email_body,
+      'text' => $email_body,
       'from' => $email_address,
    );
 
